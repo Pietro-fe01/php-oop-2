@@ -16,6 +16,10 @@
     margin: auto;
 }
 
+:root{
+    --green-color: #519981;
+}
+
 /*-------------------------
     HEADER TOP
 -------------------------*/
@@ -25,7 +29,7 @@ header .header-top{
 }
 
 header .header-top * {
-    color: #78a294;
+    color: var(--green-color);
 }
 
 header .header-top .container{
@@ -104,4 +108,73 @@ header .header-bottom .head-buttons{
 
 header .header-bottom .head-buttons i{
     margin-left: 1.25rem;
+}
+
+/*-------------------------
+    MAIN PRODUCTS
+-------------------------*/
+main .products-section{
+    margin-top: 1.875rem;
+}
+
+h2, h4{
+    color: var(--green-color);
+    text-align: center;
+}
+
+main .products-section .products-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+main .product{
+}
+
+main .product .product__image{
+    position: relative;
+}
+
+main .product .product__image img{
+    width: 15.625rem;
+    height: 18.75rem;
+    object-fit: cover;
+    border: .1875rem solid #f9f9f9;
+}
+
+main .product .product__image .product__type{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: var(--green-color);
+    margin: .1875rem 0 0 .1875rem;
+    padding: .3125rem .9375rem;
+}
+
+main .product .product__image .pet-icon {
+    position: absolute;
+    bottom: .4375rem;
+    right: .4375rem;
+}
+
+main .product .product__image .pet-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+main .product .product__info{
+    border: .1875rem solid #f9f9f9;
+    max-width: 15.625rem;
+    padding: .9375rem;
+    text-align: center;
+}
+
+main .product .product__title{
+    height: 3.625rem;
+}
+
+main .product .product__price{
+    color: #e4d97f;
 }

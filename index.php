@@ -13,11 +13,25 @@
         ),
         $cat_food = new Food(
             'https://shop-cdn-m.mediazs.com/bilder/whiskas/lattine/x/g/6/400/cans_12_1000x1000_6.jpg', 
-            'Whiskas Cat Salmone in Gelatina senza zuccheri 400 g',
-            '$ 1,75',
+            'Whiskas Cat Salmone in Gelatina senza zuccheri 400 g x12',
+            '$ 21,99',
             new Category("Cat"),
             308
-        )
+        ),
+        $dog_food = new Food(
+            'https://www.isoladeitesori.it/dw/image/v2/BGRZ_PRD/on/demandware.static/-/Sites-it-master-catalog/default/dw359c75bb/idt/migliorcane_bocconi_con_manzo_405_gr__8007520011204_160924.jpg?sw=800&sh=800', 
+            'Migliorcane Dog Adult Bocconi con Manzo 405 gr',
+            '$ 0,75',
+            new Category("Dog"),
+            239
+        ),
+        $cat_food = new Food(
+            'https://shop-cdn-m.mediazs.com/bilder/whiskas/lattine/x/g/6/400/cans_12_1000x1000_6.jpg', 
+            'Whiskas Cat Salmone in Gelatina senza zuccheri 400 g x12',
+            '$ 21,99',
+            new Category("Cat"),
+            308
+        ),
     ];
 
     // var_dump($all_products);
@@ -79,7 +93,32 @@
         <!-- Header bottom -->
     </header>
 
-    <main></main>
+    <main>
+        <section class="container products-section">
+            <h2>Products</h2>
+
+            <div class="products-container">
+                <?php foreach ($all_products as $i => $product) {?>
+                <div class="product">
+                    <div class="product__image">
+                        <img src="<?php echo $product->getProductImage()?>" alt="as">
+                        <div class="product__type"> 
+                            <?php echo $product->getProductType() . '-' . $product->getProductCategory()->getCategory(); ?>
+                        </div>
+                        <div class="pet-icon">
+                            <img src="<?php echo $product->getProductCategory()->getIcon(); ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="product__info">
+                        <h4 class="product__title"><?php echo $product->getProductTitle() ?></h4>
+                        <h2 class="product__price"><?php echo $product->getProductPrice() ?></h2>
+                        <small class="product__calories"><?php echo $product->getProductCalories() . ' calories'?></small>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </section>
+    </main>
 
     <footer></footer>
 </body>
