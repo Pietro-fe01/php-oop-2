@@ -103,7 +103,7 @@
                     <div class="product__image">
                         <img src="<?php echo $product->getProductImage()?>" alt="as">
                         <div class="product__type"> 
-                            <?php echo $product->getProductType() . '-' . $product->getProductCategory()->getCategory(); ?>
+                            <?php echo $product->getProductCategory()->getCategory() . '-' . $product->getProductType(); ?>
                         </div>
                         <div class="pet-icon">
                             <img src="<?php echo $product->getProductCategory()->getIcon(); ?>" alt="">
