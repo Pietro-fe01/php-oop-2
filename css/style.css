@@ -125,13 +125,13 @@ h2, h4{
 main .products-section .products-container{
     display: flex;
     justify-content: space-around;
-}
-
-main .product{
+    margin-top: 1.875rem;
 }
 
 main .product .product__image{
     position: relative;
+    width: 15.625rem;
+    height: 18.75rem;
 }
 
 main .product .product__image img{
@@ -177,4 +177,10 @@ main .product .product__title{
 
 main .product .product__price{
     color: #e4d97f;
+    text-decoration: underline;
+    margin-bottom: .625rem;
+}
+
+main .product .product__calories{
+    font-weight: bold;
 }
