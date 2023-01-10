@@ -1,0 +1,107 @@
+/*-------------------------
+    RESET 
+-------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------
+    COMMONS 
+-------------------------*/
+.container{
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/*-------------------------
+    HEADER TOP
+-------------------------*/
+header .header-top{
+    background-color: #fefefe;
+    height: 1.875rem;
+}
+
+header .header-top * {
+    color: #78a294;
+}
+
+header .header-top .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .header-top .contact-info small{
+    margin-right: 1.25rem;
+}
+
+header .header-top .right-links a{
+    text-decoration: none;
+    margin-left: 1.25rem;
+}
+
+/*-------------------------
+    HEADER BOTTOM
+-------------------------*/
+header .header-bottom{
+    background-color: #343434;
+    color: white;
+    height: 3.125rem;
+}
+
+header .header-bottom .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .header-bottom .logo{
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+header .header-bottom .logo img{
+    width: 15%;
+    border-radius: 50%;
+    margin-right: .3125rem;
+}
+
+header .header-bottom .nav-menu{
+    width: 30%;
+}
+
+header .header-bottom .nav-menu ul{
+    list-style: none;
+    display: flex;
+}
+
+header .header-bottom .nav-menu ul li a{
+    text-decoration: none;
+    color: white;
+    margin: 0 .9375rem;
+    display: flex;
+    align-items: baseline;
+}
+
+header .header-bottom .nav-menu .fa-house{
+    margin-right: .625rem;
+}
+
+header .header-bottom .nav-menu .fa-chevron-down{
+    margin-left: .3125rem;
+    font-size: .625rem;
+}
+
+header .header-bottom .head-buttons{
+    width: 15%;
+}
+
+header .header-bottom .head-buttons i{
+    margin-left: 1.25rem;
+}
