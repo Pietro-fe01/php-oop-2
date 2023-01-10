@@ -1,5 +1,5 @@
 <?php 
-    class Food extends Product{
+    class Food extends Product {
         private string $product_type = 'FOOD';
         private $calories;
         private $food_deadline;
