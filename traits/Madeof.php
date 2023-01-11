@@ -10,6 +10,6 @@
 
         // Get where is made
         public function getWhereIsMade() {
-            return 'Made in ' . $this->whereIsMade;
+            return "Made in {$this->whereIsMade}.";
         }
     }

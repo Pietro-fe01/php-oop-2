@@ -77,17 +77,21 @@
                     <div class="product__info">
                         <h4 class="product__title"><?php echo $product->getProductTitle() ?></h4>
                         <h2 class="product__price"><?php echo $product->getProductPrice() ?></h2>
-                        <!-- Check if $product's metod exists -->
+                        <!--Info about class Food -->
                         <?php if( get_class($product) == 'Food' ){ ?> 
                             <small class="product__calories" >
                                 <?php echo $product->getProductCalories() . ' calories'?>
                             </small>
+                        <!--Info about class Game -->
                         <?php } elseif (get_class($product) == 'Game') {?>
-                            game
+                            info for obejects from the class Game
+                        <!--Info about class Kennel -->
                         <?php } elseif (get_class($product) == 'Kennel') { ?>
-                            Cuccia
+                            info for obejects from the class Kennel
                         <?php } ?>
-                        <h6><?php echo $product->getWhereIsMade() ?></h6>
+
+                        <!-- Here the info in common again -->
+                        <h6 class="product__made"><?php echo $product->getWhereIsMade() ?></h6>
                     </div>
                 </div>
                 <?php } ?>

@@ -23,6 +23,14 @@
 /*-------------------------
     HEADER TOP
 -------------------------*/
+header {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
 header .header-top{
     background-color: #fefefe;
     height: 1.875rem;
@@ -179,14 +187,19 @@ main .product .product__info{
 
 main .product .product__title{
     height: 3.625rem;
+    text-transform: uppercase;
 }
 
 main .product .product__price{
     color: #e4d97f;
     text-decoration: underline;
-    margin-bottom: .625rem;
+    margin: .625rem 0;
 }
 
 main .product .product__calories{
     font-weight: bold;
+}
+
+main .product .product__made{
+    margin-top: .9375rem;
 }
