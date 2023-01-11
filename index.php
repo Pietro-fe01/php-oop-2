@@ -92,7 +92,10 @@
 
                         <!-- Here the info in common again -->
                         <h6 class="product__made"><?php echo $product->getWhereIsMade() ?></h6>
-                        <button class="add-cart-btn"><i class="fa-solid fa-cart-shopping"></i> ADD TO CART</button>
+                        <button class="add-cart-btn">
+                            <span>ADD TO CART</span>
+                            <i class="cart fa-sharp fa-solid fa-cart-shopping"></i>
+                        </button>
                     </div>
                 </div>
                 <?php } ?>

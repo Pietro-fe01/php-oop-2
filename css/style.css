@@ -204,12 +204,57 @@ main .product .product__calories{
     font-weight: bold;
 }
 
+/*---------------------------
+    BUTTON ANIMATION
+---------------------------*/
 main .product .add-cart-btn{
-    background-color: #fffbfe;
-    color: var(--green-color);
+    background-color: transparent;
+    border: 1px solid var(--green-color);
     padding: 8px 15px;
+    /* border-radius: .3125rem; */
     cursor: pointer;
+    color: var(--green-color);
     font-weight: bold;
-    border: 2px solid #79938a;
-    border-radius: .3125rem;
+    width: 80%;
+    position: relative;
+    overflow: hidden;
+}
+
+main .product .add-cart-btn span{
+    transition: all 0.3s;
+}
+
+
+main .product .add-cart-btn .cart{
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: white;
+}
+
+main .product .add-cart-btn::before{
+    position: absolute;
+    left: -80px;
+    top: -2px;
+    content: "";
+    display: block;
+    color: black;
+    background-color: var(--green-color);
+    width: 50px;
+    height: 35px;
+    transition: all 0.3s;
+}
+
+main .product .add-cart-btn:hover span{
+    margin-left: 40px;
+}
+
+main .product .add-cart-btn:hover .cart{
+    left: 14px;
+    transition: all 0.3s;
+}
+
+main .product .add-cart-btn:hover::before{
+    left: -5px;
 }
