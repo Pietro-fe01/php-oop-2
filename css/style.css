@@ -183,6 +183,11 @@ main .product .product__info{
     max-width: 15.625rem;
     padding: .9375rem;
     text-align: center;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 main .product .product__title{
@@ -193,13 +198,18 @@ main .product .product__title{
 main .product .product__price{
     color: #e4d97f;
     text-decoration: underline;
-    margin: .625rem 0;
 }
 
 main .product .product__calories{
     font-weight: bold;
 }
 
-main .product .product__made{
-    margin-top: .9375rem;
+main .product .add-cart-btn{
+    background-color: #fffbfe;
+    color: var(--green-color);
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 2px solid #79938a;
+    border-radius: .3125rem;
 }
