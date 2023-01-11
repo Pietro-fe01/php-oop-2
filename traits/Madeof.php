@@ -1,6 +1,6 @@
 <?php
     // Specifies where the product's made from
-    trait madeOfWhere {
+    trait MadeOfWhere {
         private $whereIsMade;
 
         // Set where is made

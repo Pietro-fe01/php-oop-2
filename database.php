@@ -19,6 +19,7 @@
             'Kuphy Electric Rolling Ball Toy Automatic',
             '$ 11,98',
             new Category("Dog"),
+            ['Black', 'Blue', 'Yellow', 'Pink', 'Green'],
             'England'
         ),
         $cat_food_one = new Food(

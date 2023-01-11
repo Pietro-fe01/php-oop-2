@@ -78,15 +78,21 @@
                         <h4 class="product__title"><?php echo $product->getProductTitle() ?></h4>
                         <h2 class="product__price"><?php echo $product->getProductPrice() ?></h2>
                         <!--Info about class Food -->
-                        <?php if( get_class($product) == 'Food' ){ ?> 
+                        <?php if( get_class($product) === 'Food' ){ ?> 
                             <small class="product__calories" >
-                                <?php echo $product->getProductCalories() . ' calories'?>
+                                <strong>Calories: </strong>
+                                <?php echo $product->getProductCalories()?>
                             </small>
                         <!--Info about class Game -->
-                        <?php } elseif (get_class($product) == 'Game') {?>
-                            info for obejects from the class Game
+                        <?php } elseif (get_class($product) === 'Game') {?>
+                            <div>
+                                <strong>Colors avaiable: </strong>
+                                <?php forEach( $product->getColorsAvaiable() as $k => $color ) {
+                                    echo ($k == count($product->getColorsAvaiable()) - 1) ? $color . '.' : $color . ', ';
+                                } ?>
+                            </div>
                         <!--Info about class Kennel -->
-                        <?php } elseif (get_class($product) == 'Kennel') { ?>
+                        <?php } elseif (get_class($product) === 'Kennel') { ?>
                             info for obejects from the class Kennel
                         <?php } ?>
 

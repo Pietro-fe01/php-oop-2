@@ -200,10 +200,6 @@ main .product .product__price{
     text-decoration: underline;
 }
 
-main .product .product__calories{
-    font-weight: bold;
-}
-
 /*---------------------------
     BUTTON ANIMATION
 ---------------------------*/
@@ -211,7 +207,7 @@ main .product .add-cart-btn{
     background-color: transparent;
     border: 1px solid var(--green-color);
     padding: 8px 15px;
-    /* border-radius: .3125rem; */
+    border-radius: .3125rem;
     cursor: pointer;
     color: var(--green-color);
     font-weight: bold;
