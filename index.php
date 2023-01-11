@@ -1,42 +1,5 @@
 <?php 
-    require_once __DIR__ . '/classes/Product.php';
-    require_once __DIR__ . '/classes/Category.php';
-    require_once __DIR__ . '/classes/Food.php';
-    require_once __DIR__ . '/classes/Game.php';
-    require_once __DIR__ . '/classes/Kennel.php';
-
-    $all_products = [
-        $dog_food = new Food(
-            'https://www.isoladeitesori.it/dw/image/v2/BGRZ_PRD/on/demandware.static/-/Sites-it-master-catalog/default/dw359c75bb/idt/migliorcane_bocconi_con_manzo_405_gr__8007520011204_160924.jpg?sw=800&sh=800', 
-            'Migliorcane Dog Adult Bocconi con Manzo 405 gr',
-            '$ 0,75',
-            new Category("Dog"),
-            239
-        ),
-        $cat_food = new Food(
-            'https://shop-cdn-m.mediazs.com/bilder/whiskas/lattine/x/g/6/400/cans_12_1000x1000_6.jpg', 
-            'Whiskas Cat Salmone in Gelatina senza zuccheri 400 g x12',
-            '$ 21,99',
-            new Category("Cat"),
-            308
-        ),
-        $dog_food = new Food(
-            'https://arcaplanet.vtexassets.com/arquivos/ids/243809/royal-canin-size-cane-maxi-adult.jpg?v=1759767281', 
-            'Crocchette per cani Royal Canin Size Maxi Adult.',
-            '$ 79,99',
-            new Category("Dog"),
-            420
-        ),
-        $cat_food = new Food(
-            'https://shop-cdn-m.mediazs.com/bilder/gourmet/gold/pacco/misto/x/g/3/400/icons_saverpacks_pyramids_0x00g_template_1000x1000_int_1_2022_06_13t125226_789_3.jpg', 
-            'Gourmet Gold Pacco misto 48 x 85 g',
-            '$ 24,99',
-            new Category("Cat"),
-            349
-        ),
-    ];
-
-    // var_dump($all_products);
+    require_once __DIR__ . '/database.php';
 ?>
 
 <!DOCTYPE html>
@@ -114,7 +77,12 @@
                     <div class="product__info">
                         <h4 class="product__title"><?php echo $product->getProductTitle() ?></h4>
                         <h2 class="product__price"><?php echo $product->getProductPrice() ?></h2>
-                        <small class="product__calories"><?php echo $product->getProductCalories() . ' calories'?></small>
+                        <!-- Check if $product's metod exists -->
+                        <?php if( method_exists($product, 'getProductCalories') ){ ?> 
+                            <small class="product__calories" >
+                                <?php echo $product->getProductCalories() . ' calories'?>
+                            </small>
+                        <?php } ?>
                     </div>
                 </div>
                 <?php } ?>

@@ -125,7 +125,13 @@ h2, h4{
 main .products-section .products-container{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 1.875rem;
+}
+
+main .products-section .products-container .product {
+    width: calc(100% / 4);
+    margin-bottom: 3.125rem;
 }
 
 main .product .product__image{
