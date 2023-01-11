@@ -78,11 +78,16 @@
                         <h4 class="product__title"><?php echo $product->getProductTitle() ?></h4>
                         <h2 class="product__price"><?php echo $product->getProductPrice() ?></h2>
                         <!-- Check if $product's metod exists -->
-                        <?php if( method_exists($product, 'getProductCalories') ){ ?> 
+                        <?php if( get_class($product) == 'Food' ){ ?> 
                             <small class="product__calories" >
                                 <?php echo $product->getProductCalories() . ' calories'?>
                             </small>
+                        <?php } elseif (get_class($product) == 'Game') {?>
+                            game
+                        <?php } elseif (get_class($product) == 'Kennel') { ?>
+                            Cuccia
                         <?php } ?>
+                        <h6><?php echo $product->getWhereIsMade() ?></h6>
                     </div>
                 </div>
                 <?php } ?>
