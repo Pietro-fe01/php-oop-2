@@ -1,7 +1,9 @@
 <?php 
-    require_once __DIR__ . '/classes/product.php';
-    require_once __DIR__ . '/classes/category.php';
-    require_once __DIR__ . '/classes/food.php';
+    require_once __DIR__ . '/classes/Product.php';
+    require_once __DIR__ . '/classes/Category.php';
+    require_once __DIR__ . '/classes/Food.php';
+    require_once __DIR__ . '/classes/Game.php';
+    require_once __DIR__ . '/classes/Kennel.php';
 
     $all_products = [
         $dog_food = new Food(
