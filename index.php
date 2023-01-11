@@ -79,13 +79,13 @@
                         <h2 class="product__price"><?php echo $product->getProductPrice() ?></h2>
                         <!--Info about class Food -->
                         <?php if( get_class($product) === 'Food' ){ ?> 
-                            <small class="product__calories" >
+                            <div class="product__calories" >
                                 <strong>Calories: </strong>
                                 <?php echo $product->getProductCalories()?>
-                            </small>
+                            </div>
                         <!--Info about class Game -->
                         <?php } elseif (get_class($product) === 'Game') {?>
-                            <div>
+                            <div class="product__colors">
                                 <strong>Colors avaiable: </strong>
                                 <?php forEach( $product->getColorsAvaiable() as $k => $color ) {
                                     echo ($k == count($product->getColorsAvaiable()) - 1) ? $color . '.' : $color . ', ';
@@ -93,7 +93,12 @@
                             </div>
                         <!--Info about class Kennel -->
                         <?php } elseif (get_class($product) === 'Kennel') { ?>
-                            info for obejects from the class Kennel
+                            <div class="product__colors">
+                                <strong>Colors avaiable: </strong>
+                                <?php forEach( $product->getColorsAvaiable() as $k => $color ) {
+                                    echo ($k == count($product->getColorsAvaiable()) - 1) ? $color . '.' : $color . ', ';
+                                } ?>
+                            </div>
                         <?php } ?>
 
                         <!-- Here the info in common again -->

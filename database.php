@@ -35,6 +35,7 @@
             'Wholesale Flat Roof Dog House, 1 Piece, Large Kennels Wood',
             '$ 83,76',
             new Category("Dog"),
+            ['Wood/Black', 'Black/White', 'Yellow/Red'],
             'China'
         ),
         $dog_food_two = new Food(
