@@ -4,6 +4,8 @@
 
         //Get product colors
         public function getColorsAvaiable(){
-            return $this->colors_avaiable;
+            foreach ($this->colors_avaiable as $k => $color) {
+                echo ($k == count($this->colors_avaiable) - 1) ? $color . '.' : $color . ', ';
+            }
         }
     }

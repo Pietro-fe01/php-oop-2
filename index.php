@@ -87,17 +87,13 @@
                         <?php } elseif (get_class($product) === 'Game') {?>
                             <div class="product__colors">
                                 <strong>Colors avaiable: </strong>
-                                <?php forEach( $product->getColorsAvaiable() as $k => $color ) {
-                                    echo ($k == count($product->getColorsAvaiable()) - 1) ? $color . '.' : $color . ', ';
-                                } ?>
+                                <?php $product->getColorsAvaiable() ?>
                             </div>
                         <!--Info about class Kennel -->
                         <?php } elseif (get_class($product) === 'Kennel') { ?>
                             <div class="product__colors">
                                 <strong>Colors avaiable: </strong>
-                                <?php forEach( $product->getColorsAvaiable() as $k => $color ) {
-                                    echo ($k == count($product->getColorsAvaiable()) - 1) ? $color . '.' : $color . ', ';
-                                } ?>
+                                <?php $product->getColorsAvaiable() ?>
                             </div>
                         <?php } ?>
 
